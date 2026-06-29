@@ -1,35 +1,22 @@
-// import React from "react";
-// import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { Route, Link, Switch } from "react-router-dom";
-import { HomePage } from "../app/screens/homePage";
-import { ProductsPage } from "../app/screens/productsPage";
-import { OrdersPage } from "../app/screens/ordersPage";
-import { UsersPage } from "../app/screens/usersPage";
-import { HelpPage } from "../app/screens/helpPage";
-import "../css/app.css";
 
-function App() {
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import { HomePage } from "../screens/homePage";
+import { ProductsPage } from "../screens/productsPage";
+import { OrdersPage } from "../screens/ordersPage";
+import { UsersPage } from "../screens/userPage";
+import { HomeNavbar } from "./components/headers/HomeNavbar";
+import { OtherNavbar } from "./components/headers/OtherNavbar";
+import { Footer } from "./components/footer";
+import "../css/App.css";
+import "../css/navbar.css";
+import { HelpPage } from "../screens/helpPage";
+
+function Layout() {
+  const location = useLocation();
+
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">HomePage</Link>
-          </li>
-          <li>
-            <Link to="/products">ProductsPage</Link>
-          </li>
-          <li>
-            <Link to="/orders">OrdersPage</Link>
-          </li>
-          <li>
-            <Link to="/member-page">UsersPage</Link>
-          </li>
-          <li>
-            <Link to="/help-page">HelpPage</Link>
-          </li>
-        </ul>
-      </nav>
+    <>
+      {location.pathname === "/" ? <HomeNavbar /> : <OtherNavbar />}
       <Switch>
         <Route path="/products">
           <ProductsPage />
@@ -40,15 +27,25 @@ function App() {
         <Route path="/member-page">
           <UsersPage />
         </Route>
-        <Route path="/helpPage">
+        <Route path="/help">
           <HelpPage />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <HomePage />
         </Route>
       </Switch>
-    </div>
+      <Footer />
+    </>
   );
 }
+
+function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+}
+
 
 export default App;
