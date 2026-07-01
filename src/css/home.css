@@ -68,7 +68,7 @@
   margin-top: 45px;
 }
 
-.homepage .popuar-dishes-frame .popular-section .category-title {
+.homepage .popular-dishes-frame .popular-section .category-title {
   font-family: "Roboto Serif";
   font-size: 36px;
   font-weight: 600;
@@ -79,7 +79,7 @@
   color: #000;
 }
 
-.homepage .popuar-dishes-frame .popular-section .cards-frame {
+.homepage .popular-dishes-frame .popular-section .cards-frame {
   width: 100%;
   margin-top: 43px;
   display: flex;
@@ -89,13 +89,13 @@
   margin-top: 43px;
 }
 
-.homepage .popuar-dishes-frame .cards-frame .card {
+.homepage .popular-dishes-frame .cards-frame .card {
   min-width: 300px;
   min-height: 430px;
   cursor: pointer;
 }
 
-.homepage .popuar-dishes-frame .cards-frame .card .card-cover {
+.homepage .popular-dishes-frame .cards-frame .card .card-cover {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.4),

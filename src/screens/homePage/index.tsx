@@ -9,7 +9,6 @@ import Events from "./Events";
 export default function HomePage() {
   return (
     <div className={"home-page"}>
-      HomePage
       <Statistics />
       <PopularDishes />
       <Advertisement />

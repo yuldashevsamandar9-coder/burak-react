@@ -1,9 +1,9 @@
-import React from "react";
+//import React from "react";
 import { Box, Container, Divider, Stack } from "@mui/material";
 
 export default function Statistics() {
   return (
-    <div className={"static-frame"}>
+    <div className={"static-frame"} style={{ background: "#343434" }}>
       <Container maxWidth="lg">
         <Stack
           direction="row"
