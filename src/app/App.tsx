@@ -1,15 +1,20 @@
-
-import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
-import { HomePage } from "../screens/homePage";
-import { ProductsPage } from "../screens/productsPage";
-import { OrdersPage } from "../screens/ordersPage";
-import { UsersPage } from "../screens/userPage";
-import { HomeNavbar } from "./components/headers/HomeNavbar";
-import { OtherNavbar } from "./components/headers/OtherNavbar";
-import { Footer } from "./components/footer";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import HomePage from "../screens/homePage";
+import ProductsPage from "../screens/productsPage";
+import OrdersPage from "../screens/ordersPage";
+import UsersPage from "../screens/userPage";
+import HomeNavbar from "./components/headers/HomeNavbar";
+import OtherNavbar from "./components/headers/OtherNavbar";
+import Footer from "./components/footer";
 import "../css/App.css";
 import "../css/navbar.css";
-import { HelpPage } from "../screens/helpPage";
+import "../css/footer.css";
+import HelpPage from "../screens/helpPage";
 
 function Layout() {
   const location = useLocation();
@@ -46,6 +51,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
