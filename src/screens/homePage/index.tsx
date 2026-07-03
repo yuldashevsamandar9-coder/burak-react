@@ -12,8 +12,9 @@ export default function HomePage() {
       <Statistics />
       <PopularDishes />
       <NewDishes />
-      <ActiveUsers />
       <Advertisement />
+      <ActiveUsers />
+
       <Events />
     </div>
   );
