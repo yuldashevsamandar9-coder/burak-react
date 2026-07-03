@@ -22,6 +22,8 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.27.2",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
     "moment": "^2.29.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -32,7 +34,7 @@
     "socket.io-client": "^4.7.5",
     "styled-components": "5.3.5",
     "sweetalert2": "^11.4.23",
-    "swiper": "^8.3.1",
+    "swiper": "^14.0.1",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^2.1.4"
   },

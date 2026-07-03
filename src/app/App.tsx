@@ -4,17 +4,17 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import HomePage from "../screens/homePage";
-import ProductsPage from "../screens/productsPage";
-import OrdersPage from "../screens/ordersPage";
-import UsersPage from "../screens/userPage";
+import HomePage from "../app/screens/homePage";
+import ProductsPage from "../app/screens/productsPage";
+import OrdersPage from "../app/screens/ordersPage";
+import UsersPage from "../app/screens/userPage";
 import HomeNavbar from "./components/headers/HomeNavbar";
 import OtherNavbar from "./components/headers/OtherNavbar";
 import Footer from "./components/footer";
 import "../css/App.css";
 import "../css/navbar.css";
 import "../css/footer.css";
-import HelpPage from "../screens/helpPage";
+import HelpPage from "../app/screens/helpPage";
 
 function Layout() {
   const location = useLocation();
