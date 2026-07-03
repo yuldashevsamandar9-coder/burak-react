@@ -1,4 +1,4 @@
-//import React from "react";
+import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Card from "@mui/joy/Card";
@@ -20,16 +20,16 @@ export default function NewDishes() {
     <div className={"new-products-frame"}>
       <Container>
         <Stack className={"main"}>
-          <Box className="category-title">Fresh Menu</Box>
+          <Box className={"category-title"}>Fresh Menu</Box>
           <Stack className={"cards-frame"}>
             <CssVarsProvider>
               {newDishes.length !== 0 ? (
                 newDishes.map((ele, index) => {
                   return (
-                    <Card key={index} variant="outlined" className="card">
+                    <Card key={index} variant="outlined" className={"card"}>
                       <CardOverflow>
                         <div className="product-sale">Normal size</div>
-                        <AspectRatio ratio={1}>
+                        <AspectRatio ratio="1">
                           <img src={ele.imagePath} alt="" />
                         </AspectRatio>
                       </CardOverflow>
@@ -40,7 +40,7 @@ export default function NewDishes() {
                             <Typography className={"title"}>
                               {ele.productName}
                             </Typography>
-                            <Divider />
+                            <Divider width="2" height="24" bg="#d9d9d9" />
                             <Typography className={"price"}>$12</Typography>
                           </Stack>
                           <Stack>

@@ -1,19 +1,15 @@
-//import React from "react";
+import React from "react";
 import { Container, Stack, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import Divider from "../../components/divider";
 import Button from "@mui/material/Button";
-import Rating from "@mui/material/Rating";
-
-// Swiper CSS stillari (to'g'ri tartibda)
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
-// Modullarni 'swiper/modules' ichidan import qilamiz
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import Rating from "@mui/material/Rating"; // @ts-ignore
+import "swiper/css"; // @ts-ignore
+import "swiper/css/free-mode"; // @ts-ignore
+import "swiper/css/navigation"; // @ts-ignore
+import "swiper/css/thumbs"; // @ts-ignore
+import { FreeMode, Navigation, Thumbs } from "swiper";
 
 export default function ChosenProduct() {
   return (
@@ -25,7 +21,6 @@ export default function ChosenProduct() {
             loop={true}
             spaceBetween={10}
             navigation={true}
-            // Modullar shu yerda massiv ichida beriladi
             modules={[FreeMode, Navigation, Thumbs]}
             className="swiper-area"
           >

@@ -1,9 +1,7 @@
-//import React from "react";
+import React from "react";
 import { Box, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import TabPanel from "@mui/lab/TabPanel";
-import ProcessOrders from "./ProcessOrders";
-import FinishedOrders from "./FinishedOrders";
 
 export default function PausedOrders() {
   return (
@@ -19,13 +17,14 @@ export default function PausedOrders() {
                       <img
                         src={"/img/lavash.webp"}
                         className={"order-dish-img"}
+                        alt=""
                       />
                       <p className={"title-dish"}>Lavash</p>
                       <Box className={"price-box"}>
                         <p>$9</p>
-                        <img src={"/icons/close.svg"} />
+                        <img src={"/icons/close.svg"} alt="" />
                         <p>2</p>
-                        <img src={"/icons/pause.svg"} />
+                        <img src={"/icons/pause.svg"} alt="" />
                         <p style={{ marginLeft: "15px" }}>$24</p>
                       </Box>
                     </Box>
@@ -37,12 +36,17 @@ export default function PausedOrders() {
                 <Box className={"box-total"}>
                   <p>Product price</p>
                   <p>$18</p>
-                  <img src={"/icons/plus.svg"} style={{ marginLeft: "20px" }} />
+                  <img
+                    src={"/icons/plus.svg"}
+                    style={{ marginLeft: "20px" }}
+                    alt=""
+                  />
                   <p>Delivery cost</p>
                   <p>$2</p>
                   <img
                     src={"/icons/pause.svg"}
                     style={{ marginLeft: "20px" }}
+                    alt=""
                   />
                   <p>Total</p>
                   <p>$20</p>
@@ -62,11 +66,12 @@ export default function PausedOrders() {
           );
         })}
 
-        {true && (
+        {false && (
           <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
             <img
               src={"/icons/noimage-list.svg"}
               style={{ width: 300, height: 300 }}
+              alt=""
             />
           </Box>
         )}

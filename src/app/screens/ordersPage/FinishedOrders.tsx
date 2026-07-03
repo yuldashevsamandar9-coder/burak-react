@@ -1,7 +1,6 @@
-//import React from "react";
+import React from "react";
 import { Box, Stack } from "@mui/material";
 import TabPanel from "@mui/lab/TabPanel";
-import ProcessOrders from "./ProcessOrders"
 
 export default function FinishedOrders() {
   return (
@@ -11,19 +10,20 @@ export default function FinishedOrders() {
           return (
             <Box key={index} className={"order-main-box"}>
               <Box className={"order-box-scroll"}>
-                {[1, 2, 3].map((ele, index) => {
+                {[1, 2, 3].map((ele2, index2) => {
                   return (
-                    <Box key={index} className={"orders-name-price"}>
+                    <Box key={index2} className={"orders-name-price"}>
                       <img
                         src={"/img/kebab-fresh.webp"}
                         className={"order-dish-img"}
+                        alt=""
                       />
                       <p className={"title-dish"}>Kebab</p>
                       <Box className={"price-box"}>
                         <p>$12</p>
-                        <img src={"/icons/close.svg"} />
+                        <img src={"/icons/close.svg"} alt="" />
                         <p>2</p>
-                        <img src={"/icons/pause.svg"} />
+                        <img src={"/icons/pause.svg"} alt="" />
                         <p style={{ marginLeft: "15px" }}>$24</p>
                       </Box>
                     </Box>
@@ -35,12 +35,17 @@ export default function FinishedOrders() {
                 <Box className={"box-total"}>
                   <p>Product price</p>
                   <p>$24</p>
-                  <img src={"/icons/plus.svg"} style={{ marginLeft: "20px" }} />
+                  <img
+                    src={"/icons/plus.svg"}
+                    style={{ marginLeft: "20px" }}
+                    alt=""
+                  />
                   <p>Delivery cost</p>
                   <p>$2</p>
                   <img
                     src={"/icons/pause.svg"}
                     style={{ marginLeft: "20px" }}
+                    alt=""
                   />
                   <p>Total</p>
                   <p>$26</p>
@@ -55,6 +60,7 @@ export default function FinishedOrders() {
             <img
               src={"/icons/noimage-list.svg"}
               style={{ width: 300, height: 300 }}
+              alt=""
             />
           </Box>
         )}

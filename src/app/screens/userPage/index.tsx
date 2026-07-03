@@ -31,9 +31,10 @@ export default function UserPage() {
                   <img
                     src={"/icons/default-user.svg"}
                     className={"order-user-avatar"}
+                    alt=""
                   />
                   <div className={"order-user-icon-box"}>
-                    <img src={"/icons/user-badge.svg"} />
+                    <img src={"/icons/user-badge.svg"} alt="" />
                   </div>
                 </div>
                 <span className={"order-user-name"}>Martin</span>
@@ -46,7 +47,7 @@ export default function UserPage() {
                 <TelegramIcon />
                 <YouTubeIcon />
               </Box>
-              <p className={"user-desc"}>no description</p>
+              <p className={"user-desc"}>No description</p>
             </Box>
           </Stack>
         </Stack>

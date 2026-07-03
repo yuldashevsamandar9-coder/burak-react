@@ -1,4 +1,4 @@
-import { useState, type SyntheticEvent } from "react";
+import { useState, SyntheticEvent } from "react";
 import { Container, Stack, Box } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -50,11 +50,13 @@ export default function OrdersPage() {
                 <img
                   src={"/icons/default-user.svg"}
                   className={"order-user-avatar"}
+                  alt=""
                 />
                 <div className={"order-user-icon-box"}>
                   <img
                     src={"/icons/user-badge.svg"}
                     className={"order-user-prof-img"}
+                    alt=""
                   />
                 </div>
               </div>
@@ -103,10 +105,10 @@ export default function OrdersPage() {
               className={"card-input"}
             />
             <div className={"cards-box"}>
-              <img src={"/icons/western-card.svg"} />
-              <img src={"/icons/master-card.svg"} />
-              <img src={"/icons/paypal-card.svg"} />
-              <img src={"/icons/visa-card.svg"} />
+              <img src={"/icons/western-card.svg"} alt="" />
+              <img src={"/icons/master-card.svg"} alt="" />
+              <img src={"/icons/paypal-card.svg"} alt="" />
+              <img src={"/icons/visa-card.svg"} alt="" />
             </div>
           </Box>
         </Stack>

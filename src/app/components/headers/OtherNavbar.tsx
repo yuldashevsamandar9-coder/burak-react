@@ -4,55 +4,50 @@ import Basket from "./Basket";
 
 export default function OtherNavbar() {
   const authMember = null;
-
   return (
     <div className="other-navbar">
       <Container className="navbar-container">
         <Stack className="menu">
           <Box>
-            <NavLink to={"/"}>
-              <img className="brand-logo" src="/icons/burak.svg" />
+            <NavLink to="/">
+              <img className="brand-logo" src="/icons/burak.svg" alt="" />
             </NavLink>
           </Box>
           <Stack className="links">
-            <Box className={"hover-line"}>
-              <NavLink to={"/"}>Home</NavLink>
+            <Box className={"hover-line "}>
+              <NavLink to="/">Home</NavLink>
             </Box>
-            <Box className={"hover-line"}>
-              <NavLink to={"/products"} activeClassName={"underline"}>
+            <Box className={"hover-line "}>
+              <NavLink to="/products" activeClassName={"underline"}>
                 Products
               </NavLink>
             </Box>
-            <Box className={"hover-line"}>
-              {authMember ? (
-                <Box className={"hover-line"}>
-                  <NavLink to={"/orders"} activeClassName={"underline"}>
-                    Orders
-                  </NavLink>
-                </Box>
-              ) : null}
-            </Box>
-            <Box className={"hover-line"}>
-              {authMember ? (
-                <Box className={"hover-line"}>
-                  <NavLink to={"/member-page"} activeClassName={"underline"}>
-                    My Page
-                  </NavLink>
-                </Box>
-              ) : null}
-            </Box>
-            <Box className={"hover-line"}>
-              <NavLink to={"/help"} activeClassName={"underline"}>
+            {authMember ? (
+              <Box className={"hover-line "}>
+                <NavLink to="/orders" activeClassName={"underline"}>
+                  Orders
+                </NavLink>
+              </Box>
+            ) : null}
+            {authMember ? (
+              <Box className={"hover-line "}>
+                <NavLink to="/member-page" activeClassName={"underline"}>
+                  My Page
+                </NavLink>
+              </Box>
+            ) : null}
+            <Box className={"hover-line "}>
+              <NavLink to="/help" activeClassName={"underline"}>
                 Help
               </NavLink>
             </Box>
-            {/* Basket */}
+            {/* BASKET */}
             <Basket />
 
             {!authMember ? (
               <Box>
                 <Button variant="contained" className="login-button">
-                  LOGIN
+                  Login
                 </Button>
               </Box>
             ) : (
@@ -60,6 +55,7 @@ export default function OtherNavbar() {
                 className="user-avatar"
                 src={"/icons/default-user.svg"}
                 aria-haspopup={"true"}
+                alt=""
               />
             )}
           </Stack>
