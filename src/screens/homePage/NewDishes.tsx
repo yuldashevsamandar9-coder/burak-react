@@ -18,7 +18,7 @@ const newDishes = [
 export default function NewDishes() {
   return (
     <div className={"new-products-frame"}>
-      <Container maxWidth={false}>
+      <Container>
         <Stack className={"main"}>
           <Box className="category-title">Fresh Menu</Box>
           <Stack className={"cards-frame"}>
@@ -26,19 +26,11 @@ export default function NewDishes() {
               {newDishes.length !== 0 ? (
                 newDishes.map((ele, index) => {
                   return (
-                    <Card key={index} variant="outlined" className={"card"}>
+                    <Card key={index} variant="outlined" className="card">
                       <CardOverflow>
                         <div className="product-sale">Normal size</div>
                         <AspectRatio ratio={1}>
-                          <img
-                            src={ele.imagePath}
-                            alt={ele.productName}
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "cover",
-                            }}
-                          />
+                          <img src={ele.imagePath} alt="" />
                         </AspectRatio>
                       </CardOverflow>
 
