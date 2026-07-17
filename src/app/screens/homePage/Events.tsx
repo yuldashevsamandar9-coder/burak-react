@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { plans } from "../../../lib/data/plans";
 
 SwiperCore.use([Autoplay, Navigation, Pagination]);
@@ -43,7 +43,7 @@ export default function Events() {
                       <div className={"event-title-speaker"}>
                         <strong>{value.title}</strong>
                         <div className={"event-organizator"}>
-                          <img src={"/icons/speaker.svg"} alt=""/>
+                          <img src={"/icons/speaker.svg"} alt="" />
                           <p className={"spec-text-author"}>{value.author}</p>
                         </div>
                       </div>
@@ -56,7 +56,7 @@ export default function Events() {
                           {value.date}
                         </div>
                         <div className={"bott-info-main"}>
-                          <img src={"/icons/location.svg"} alt=""/>
+                          <img src={"/icons/location.svg"} alt="" />
                           {value.location}
                         </div>
                       </div>
@@ -70,13 +70,15 @@ export default function Events() {
         <Box className={"prev-next-frame"}>
           <img
             src={"/icons/arrow-right.svg"}
-            className={"swiper-button-prev"} alt=""
+            className={"swiper-button-prev"}
+            alt=""
           />
           <div className={"dot-frame-pagination swiper-pagination"}></div>
           <img
             src={"/icons/arrow-right.svg"}
             className={"swiper-button-next"}
-            style={{ transform: "rotate(-180deg)" }} alt=""
+            style={{ transform: "rotate(-180deg)" }}
+            alt=""
           />
         </Box>
       </Stack>

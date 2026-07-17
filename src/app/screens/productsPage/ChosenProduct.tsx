@@ -5,11 +5,11 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import Divider from "../../components/divider";
 import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating"; // @ts-ignore
-import "swiper/css"; // @ts-ignore
-import "swiper/css/free-mode"; // @ts-ignore
-import "swiper/css/navigation"; // @ts-ignore
-import "swiper/css/thumbs"; // @ts-ignore
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 export default function ChosenProduct() {
   return (
