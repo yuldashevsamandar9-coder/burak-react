@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { plans } from "../../../lib/data/plans";
 
-SwiperCore.use([Autoplay, Navigation, Pagination]);
-
 export default function Events() {
   return (
     <div className={"events-frame"}>

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import Divider from "../../components/divider";
 import Button from "@mui/material/Button";
-import Rating from "@mui/material/Rating"; // @ts-ignore
+import Rating from "@mui/material/Rating";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
