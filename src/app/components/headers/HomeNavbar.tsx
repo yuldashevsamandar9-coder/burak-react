@@ -10,15 +10,16 @@ export default function HomeNavbar() {
   const [value, setvalue] = useState<boolean>(true);
 
   useEffect(() => {
-    console.log("componentDidmount"); // DAta Fetch
+    console.log("componentDidmount"); // DAta Fetch baliq qarmoqga ilindi signal beradi.
     setCount(count + 1);
 
     return () => {
       console.log("componentWillUnmount");
     };
   }, [value]);
+  console.log("componentDidUpdate");
 
-  /** HANDLER  **/
+  /** HANDLERS  **/
   const buttonHandler = () => {
     setvalue(!value);
   };
