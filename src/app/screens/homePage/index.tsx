@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ActiveUsers from "./ActiveUsers";
 import Advertisement from "./Advertisement";
 import Events from "./Events";
@@ -8,6 +8,11 @@ import Statistics from "./Statistics";
 import "../../../css/home.css";
 
 export default function HomePage() {
+  // selector: DAta => Store
+  useEffect(() => {
+    // Backernd serverdan Data qabul qilamiz
+    // Backenddan qabul qilgan malumotni slice Storega joylaymiz
+  }, []);
   return (
     <div className={"homepage"}>
       <Statistics />
