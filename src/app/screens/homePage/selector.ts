@@ -18,3 +18,6 @@ export const retrieveTopUsers = createSelector(
   selectHomePage,
   (HomePage) => HomePage.topUsers,
 );
+
+// slice =>
+// selector <=

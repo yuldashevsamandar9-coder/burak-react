@@ -32,6 +32,7 @@ export default function HomePage() {
     // Backernd serverdan Data qabul qilamiz
     // Backenddan qabul qilgan malumotni slice Storega joylaymiz
   }, []);
+
   return (
     <div className={"homepage"}>
       <Statistics />
