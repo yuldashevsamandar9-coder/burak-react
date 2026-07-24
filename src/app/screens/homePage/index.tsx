@@ -12,8 +12,8 @@ import { Product } from "../../../lib/types/product";
 import ProductService from "../../services/ProductService";
 import { ProductCollection } from "../../../lib/enums/product.enum";
 import { Member } from "../../../lib/types/member";
-import "../../../css/home.css";
 import MemberService from "../../services/MemberService";
+import "../../../css/home.css";
 
 /** REDUX SLICE & SELECTOR **/
 const actionDispatch = (dispatch: Dispatch) => ({
@@ -29,6 +29,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const product = new ProductService();
+    /**     popularDishes start */
     product
       .getProducts({
         page: 1,
@@ -45,7 +46,7 @@ export default function HomePage() {
       .getProducts({
         page: 1,
         limit: 4,
-        order: "productViews",
+        order: "createdAt",
         productCollection: ProductCollection.DISH,
       })
       .then((data) => {
