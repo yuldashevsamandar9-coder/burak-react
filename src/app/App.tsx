@@ -74,7 +74,7 @@ function App() {
           onDeleteAll={onDeleteAll}
           setSignupOpen={setSignupOpen}
           setLoginOpen={setLoginOpen}
-          anchorEl={anchorEl} // anhorEl emas, anchorEl ga to'g'rilandi
+          anchorEl={anchorEl}
           handleLogoutClick={handleLogoutClick}
           handleCloseLogout={handleCloseLogout}
           handleLogoutRequest={handleLogoutRequest}

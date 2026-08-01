@@ -50,7 +50,9 @@ export default function Products(props: ProductsProps) {
   const history = useHistory();
 
   useEffect(() => {
+    // 1  Diddmount
     const product = new ProductService();
+    // 2 Jaroyon
     product
       .getProducts(productSearch)
       .then((data) => setProducts(data))
@@ -60,6 +62,7 @@ export default function Products(props: ProductsProps) {
   useEffect(() => {
     if (searchText === "") {
       productSearch.search = "";
+      // 3 Jaroyon
       setProductSearch({ ...productSearch });
     }
   }, [searchText]);
@@ -232,6 +235,7 @@ export default function Products(props: ProductsProps) {
               </div>
             </Stack>
             <Stack className="product-wrapper">
+              /* 3 Toshmat */{" "}
               {products.length !== 0 ? (
                 products.map((product: Product) => {
                   const imagePath = `${serverApi}/${product.productImages[0]}`;

@@ -144,7 +144,7 @@ export default function Basket(props: BasketProps) {
           {cartItems.length !== 0 ? (
             <Box className={"basket-order"}>
               <span className={"price"}>
-                Total: ${totalPrice} ({itemsPrice} {shippingCost})
+                Total: ${totalPrice} ({itemsPrice} + {shippingCost})
               </span>
               <Button startIcon={<ShoppingCartIcon />} variant={"contained"}>
                 Order
