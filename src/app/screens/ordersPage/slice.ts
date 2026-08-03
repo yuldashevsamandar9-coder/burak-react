@@ -8,7 +8,7 @@ const initialState: OrdersPageState = {
   finishedOrders: [],
 };
 
-const ordPageSlice = createSlice({
+const ordersPageSlice = createSlice({
   name: "ordersPage",
   initialState,
   reducers: {
@@ -25,7 +25,7 @@ const ordPageSlice = createSlice({
 });
 
 export const { setPausedOrders, setProcessOrders, setFinishedOrders } =
-  ordPageSlice.actions;
+  ordersPageSlice.actions;
 
-const OrdersPageReducer = ordPageSlice.reducer;
+const OrdersPageReducer = ordersPageSlice.reducer;
 export default OrdersPageReducer;
