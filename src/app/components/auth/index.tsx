@@ -111,7 +111,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
       const result = await member.login(loginInput);
 
       // Saving Authenticated user
-      setAuthMember(result);
+      setAuthMember(result); // Saving Authenticated user
       handleLoginClose();
     } catch (err) {
       console.log(err);

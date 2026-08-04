@@ -16,6 +16,7 @@ import "../../../css/order.css";
 import { OrderStatus } from "../../../lib/enums/Order.enum";
 import OrderService from "../../services/OrderService";
 import { useGlobals } from "../../hooks/useGlobal";
+import { useHistory } from "react-router";
 
 /** REDUX SLICE & SELECTOR **/
 const actionDispatch = (dispatch: Dispatch) => ({
@@ -27,7 +28,8 @@ const actionDispatch = (dispatch: Dispatch) => ({
 export default function OrdersPage() {
   const { setPausedOrders, setProcessOrders, setFinishedOrders } =
     actionDispatch(useDispatch());
-  const { orderBuilder } = useGlobals();
+  const history = useHistory();
+  const { orderBuilder, authMember } = useGlobals();
   const [value, setValue] = useState("1");
   const [orderInquiry, setOrderInquiry] = useState<OrderInquiry>({
     page: 1,
@@ -65,6 +67,7 @@ export default function OrdersPage() {
     setValue(newValue);
   };
 
+  if (!authMember) history.push("/");
   return (
     <div className={"order-page"}>
       <Container className="order-container">
@@ -111,6 +114,7 @@ export default function OrdersPage() {
               </div>
               <span className={"order-user-name"}>Martin</span>
               <span className={"order-user-prof"}>User</span>
+              <span className={"order-user-prof"}>No address</span>
             </Box>
             <Box className={"liner"}></Box>
             <Box className={"order-user-address"}>
